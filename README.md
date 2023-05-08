@@ -2,9 +2,9 @@
 
 # <b>Mosaic</b>
 
-### Generating The New Yorker Style Cartoons using Text-to-Image Diffusion Models
+### Generating The New Yorker Style Cartoons using Stable Diffusion
 
-<img width="500" src="art/cartoon.jpg"/>
+<img width="450" src="art/cartoon.jpg"/>
 
 </div>
 
