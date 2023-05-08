@@ -4,7 +4,7 @@
 
 ### Generating The New Yorker Style Cartoons using Stable Diffusion
 
-<img width="450" src="art/cartoon.jpg"/>
+<img width="350" src="art/cartoon.jpg"/>
 
 </div>
 
