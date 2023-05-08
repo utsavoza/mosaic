@@ -4,7 +4,7 @@
 
 ### Generating The New Yorker Style Cartoons using Text-to-Image Diffusion Models
 
-<img width="300" src="art/cartoon.jpg"/>
+<img width="500" src="art/cartoon.jpg"/>
 
 </div>
 
