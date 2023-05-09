@@ -10,6 +10,8 @@
 
 ## Introduction
 
+## Results
+
 **TODO: Complete me**
 
 ## Usage
@@ -31,6 +33,8 @@
     ```bash
     python main.py
     ```
+
+## References
 
 ## License
 
