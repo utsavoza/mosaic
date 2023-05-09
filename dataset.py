@@ -23,7 +23,7 @@ POS_IDS = tf.convert_to_tensor(
 AUTO = tf.data.AUTOTUNE
 
 
-class DatasetUtils:
+class Dataset:
     def __init__(
         self,
         dataset_archive: str = None,
@@ -86,12 +86,11 @@ class DatasetUtils:
         tokens = tokens + [PADDING_TOKEN] * (MAX_PROMPT_LENGTH - len(tokens))
         return np.array(tokens)
 
-    def process_image(self, image, tokenized_text: tf.Tensor) -> Tuple[tf.Tensor, tf.Tensor]:
-        img = Image.new("RGB", image.size)
-        img.paste(image)
-        img = tf.keras.utils.img_to_array(img)
-        img = tf.image.resize(img, (self.img_height, self.img_width))
-        return img, tokenized_text
+    def process_image(self, image_path: str, tokenized_text: tf.Tensor) -> Tuple[tf.Tensor, tf.Tensor]:
+        image = tf.io.read_file(image_path)
+        image = tf.io.decode_png(image, 3)
+        image = tf.image.resize(image, (self.img_height, self.img_width))
+        return image, tokenized_text
 
     def apply_augmentation(
         self, image_batch: tf.Tensor, token_batch: tf.Tensor
